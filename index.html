@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hamburger</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        body {
+            min-height: 100vh;
+            width: 100%;
+        }
+
+        .main {
+            background-image: url("project.jpg");
+            background-repeat: no-repeat;
+            height: 100vh;
+
+            background-size: cover;
+
+
+            max-width: 100vw;
+            max-height: 100vh;
+        }
+
+
+
+        img {
+            width: 30px;
+            height: 20px;
+        }
+
+        span {
+            color: black;
+            font-weight: 1000;
+
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+            position: relative;
+        }
+
+        /* Hide the links inside the navigation menu (except for logo/home) */
+        .topnav #myLinks {
+            display: none;
+        }
+
+        /* Style navigation menu links */
+        .topnav a {
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 24px;
+            display: block;
+        }
+
+        /* Style the hamburger menu */
+        .topnav a.icon {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        /* Add a grey background color on mouse-over */
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Style the active link (or home/logo) */
+        .active {
+            background-color: #04AA6D;
+            color: white;
+            font-size: 30px;
+        }
+
+        form {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .submit {
+            width: 60px;
+            height: 30px;
+            background-color: darksalmon;
+            border-radius: 5px;
+            border: 1px solid red;
+        }
+
+        .contact {
+            margin-top: -20px;
+            color: white;
+            min-height: 100vh;
+            width: 100%;
+            background: linear-gradient(45deg, black, black);
+        }
+
+
+        .submit:hover {
+            border: 4px solid yellow;
+            background-color: yellow;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 150px;
+
+        }
+
+        .footer .social {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .footer .social a {
+            text-decoration: none;
+            padding-left: 30px;
+            color: white;
+        }
+
+        a:hover {
+            color: yellowgreen;
+            letter-spacing: 1px;
+            font-size: larger;
+        }
+
+        .copy {
+            text-align: center;
+            margin-left: 30px;
+            margin-bottom: -20px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="main">
+        <div class="topnav">
+            <a href="index.html" class="active"><span>Gh&star;st P&star;int</span></a>
+            <!-- Navigation links (hidden by default) -->
+            <div id="myLinks">
+                <a href="index.html">Home</a>
+                <a href="Books and Notes.html">Books and Notes</a>
+                <a href="updates.html">Updates</a>
+                <a href="Discussion.html">Discussion</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <img src="menu.png">
+            </a>
+            <p style="text-align: center; color: #fff; background: black;">A premiere website for high Educaion material
+                for free</p>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <h2 style="text-align: center; margin-top: 20px; padding: 20px 20px;">Contact Us</h2>
+        <hr>
+        <form action="mailto:rk0981725@gmail.com" method="post">
+            <label for="name">Name: </label>
+            <input type="text" name="name" class="cont" required><br><br>
+            <label for="email">Email: </label>
+            <input type="email" name="email" class="cont" required><br><br>
+            <label for="message">Message: </label>
+            <textarea name="message" id="message" cols="30" rows="10"></textarea><br><br>
+            <input type="submit" value="send" class="submit">
+
+        </form>
+        <div class="footer">
+            <div class="social">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+
+
+            </div>
+            <div class="copy">
+                &copy; copyright 2021
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+    </script>
+</body>
+
+</html>
